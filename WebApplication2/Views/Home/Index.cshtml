@@ -1,0 +1,182 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .thumbnail {
+        position: relative;
+    }
+
+    .caption {
+        position: absolute;
+        top: 25%;
+        left: 8%;
+        width: 80%;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .portfolio-item {
+        padding-left: 1%;
+        padding-top: 1%;
+    }
+
+
+    #services, #portfolio {
+        background-color: burlywood;
+    }
+
+    h3 {
+        color: white;
+    }
+</style>
+
+<div class="row">
+    <div class="thumbnail text-center">
+        <img src="~/img/bgg.jpg" alt="" class="img-responsive" style="width:100%" />
+        <div class="caption">
+            <h1><strong>See the World Like Never Before!</strong></h1>
+            @Html.ActionLink("Find Out More", "Index", "Aranzman", null, new { @class = "btn btn-warning" })
+        </div>
+    </div>
+</div>
+
+<section class="content-section  text-center " id="services">
+    <div class="container">
+        <h2><strong>Our Services</strong></h2>
+        <hr class="star-primary">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+
+                <i class="fa fa-beer"></i>
+
+                <h4 class="text-success">
+                    <strong>Vacations</strong>
+                </h4>
+                <p class="text-faded mb-0">When it comes to vacations, there are as many ways to explore the world as there are people on it. Our family, honeymoon, or adults-only vacations connect you with each other and your destination. </p>
+                <br>
+                
+                @Html.ActionLink("View More", "Index", "Aranzman", new { searchBy = "Type", request = "Vacation" }, new { @class = "btn btn-success" })
+
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+
+                <i class="fa fa-camera-retro"></i>
+
+                <h4 class="text-info">
+                    <strong>Cruises</strong>
+                </h4>
+                <p class="text-faded mb-0">You can explore the world on a cruise. Ships boast dazzling amenities, including 5-star accommodations and dining, onboard thrills from casinos to water slides from casinos to water slides</p>
+                <br>
+               
+                @Html.ActionLink("View More", "Index", "Aranzman", new { searchBy = "Type", request = "Cruises" }, new { @class = "btn btn-info" })
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                <span class="service-icon rounded-circle mx-auto mb-3">
+                    <i class="fa fa-plane"></i>
+                </span>
+                <h4 class="text-danger">
+                    <strong>Group travel</strong>
+                </h4>
+                <p class="text-faded mb-0">Thinking of hosting a destination wedding in paradise or a corporate retreat in Europe? Whatever the occasion, we ensure your celebration vacation is seamless from start to finish.</p>
+                <br>
+                @Html.ActionLink("View More", "Index", "Aranzman", new { searchBy = "Type", request = "Group Travel" }, new { @class = "btn btn-danger" })
+
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                <span class="service-icon rounded-circle mx-auto mb-3">
+                    <i class="fa fa-train"></i>
+                </span>
+                <h4 class="text-primary">
+                    <strong>Guided Tours</strong>
+                </h4>
+                <p class="text-faded mb-0">Guided Tours through FINKI Travel are immersive excursions with authentic experiences that highlight the local culture,we ensure your celebration vacation is seamless from start to finish</p>
+                <br>
+                @Html.ActionLink("View More", "Index", "Aranzman", new { searchBy = "Type", request = "Guided Tour" }, new { @class = "btn btn-primary" })
+
+            </div>
+
+        </div>
+    </div>
+    <br />
+</section>
+
+
+<div class="row">
+    <div class="thumbnail text-center">
+        <img src="~/img/tekst.jpg" alt="" class="img-responsive" style="width:100%">
+        <div class="caption">
+            <h3>
+                Thank you very much for visiting our site.
+                We are the oldest travel agency in Macedonia and have been in business for more than 100 years. With our longstanding partnerships, we have become known as one of the best DMCs in Japan as well. This page will allow you to access information on our regular and special tours, booking hotels online and learning more about Macedonia.
+            </h3>
+
+        </div>
+    </div>
+</div>
+
+
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2><strong>Traveler Favorites</strong></h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 portfolio-item">
+
+                <img src="~/img/n5.png" class="img-responsive" alt="">
+
+            </div>
+            <div class="col-sm-4 portfolio-item">
+
+                <img src="~/img/n6.png" class="img-responsive" alt="">
+
+            </div>
+            <div class="col-sm-4 portfolio-item">
+
+                <img src="~/img/n7.png" class="img-responsive" alt="">
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-sm-3 portfolio-item">
+
+                <img src="~/img/n1.png" class="img-responsive" alt="">
+
+            </div>
+            <div class="col-sm-3 portfolio-item">
+
+                <img src="~/img/n2.png" class="img-responsive" alt="">
+
+            </div>
+            <div class="col-sm-3 portfolio-item">
+
+                <img src="~/img/n3.png" class="img-responsive" alt="">
+
+            </div>
+            <div class="col-sm-3 portfolio-item">
+
+                <img src="~/img/n4.png" class="img-responsive" alt="">
+
+            </div>
+
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-12 text-center">
+
+            @Html.ActionLink("View more destinations", "Index", "Destinations", null, new { @class = "btn btn-danger" })
+        </div>
+    </div>
+    <br />
+</section>

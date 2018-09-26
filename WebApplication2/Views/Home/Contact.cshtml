@@ -1,0 +1,76 @@
+﻿<style>
+    #sendMessageButton {
+        width: 52%;
+    }
+</style>
+<br />
+<div class="row">
+    <div class="container">
+        <div class="col-lg-6">
+            <h2><strong>Send us a Message</strong></h2>
+            <form name="sentMessage" novalidate>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Full Name:</label>
+                        <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Phone Number:</label>
+                        <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Email Address:</label>
+                        <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Destinations or additional information</label>
+                        <textarea rows="10" cols="240" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                    </div>
+                </div>
+                <div id="success"></div>
+                <!-- For success/fail messages -->
+                <button type="submit" class="btn btn-primary " id="sendMessageButton">Send</button>
+            </form>
+        </div>
+        <div class="col-lg-6 ">
+            <!-- Contact Details Column -->
+
+            <h2><strong>Contact Details</strong></h2>
+            <p>
+                <div class="fa fa-location-arrow"></div>
+                FINKI Travel Agency
+                "Rugjer Boskovikj" 16
+                <br>
+            </p>
+            <p>
+                <i class="fa fa-phone" aria-hidden="true"></i>      (389) 123-4567
+            </p>
+            <p>
+                <div class="fa fa-envelope"></div>
+                <a href="mailto:finkitravel@finki.ukim.mk">
+                    finkitravel@finki.ukim.mk
+                </a>
+            </p>
+            <p>
+                <div class="fa fa-clock-o"></div>  Monday - Friday: 9:00 AM to 5:00 PM
+            </p>
+            Social Media:
+            <div class="fa fa-facebook"></div>
+            <div class="fa fa-twitter"></div>
+            <div class="fa fa-linkedin-square"></div>
+            <div class="fa fa-flickr"></div>
+            <br />
+            <br />
+            <br />
+        </div>
+        <img src="~/img/rating.png" class="img-responsive" alt="">
+    </div>
+</div>
+<br />
